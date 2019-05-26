@@ -23,6 +23,9 @@ def click(key):
 
 row_index =1
 col_index =0
+
+# for안에서 함수 작성은 안하는게 좋지않을까 싶음
+
 for button_text in button_list:
     def process(t=button_text):
         click(t)
