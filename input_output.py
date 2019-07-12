@@ -1,8 +1,10 @@
 import openpyxl
 
-file = openpyxl.load_workbook('test.xlsx')
-sheet = file.active
-#sheet = file.get_sheet_by_name('sheetname')
+wb = openpyxl.load_workbook('test.xlsx')
+sheet = wb['Sheet1']
 
-for r in sheet.rows
-    print r[4].value
+for row in sheet.rows:
+    for cell in row:
+        print(cell.value, end=' ')
+    print()    
+#print(sheet['A1'].value)
