@@ -113,15 +113,23 @@ data_cols = test_data_ws.max_column + 1
 # 확률계산
 for j in range(2,data_rows):
     result_0 = 1.0
+    result_1 = 1.0
     for i in range(2, data_cols):
         test_d = test_data_ws.cell(j, i).value in bayes_value_dic_0
         if test_d == True:
             #print(test_data_ws.cell(2, i).value)
             result_0 *= bayes_value_dic_0[test_data_ws.cell(j, i).value]
     print(test_data_ws.cell(j, 1).value ,"|", result_list[0],"=",result_0*result_count_dic[result_list[0]])
-
+    
+    for k in range(2, data_cols):
+        test_d = test_data_ws.cell(j, k).value in bayes_value_dic_1
+        if test_d == True:
+            #print(test_data_ws.cell(2, i).value)
+            result_1 *= bayes_value_dic_1[test_data_ws.cell(j, k).value]
+    print(test_data_ws.cell(j, 1).value ,"|", result_list[1],"=",result_1*result_count_dic[result_list[1]])
+    
+'''
 for j in range(2, data_rows):     
-    result_1 = 1.0
     for i in range(2, data_cols):
         test_d = test_data_ws.cell(j, i).value in bayes_value_dic_1
         if test_d == True:
@@ -131,7 +139,7 @@ for j in range(2, data_rows):
     
 print()
 print("결과")
-
+'''
 '''
 for i in range(2,data_rows):
     print(test_data_ws.cell(i, 1).value ,"|", result_list[0],"=",result_0*result_count_dic[result_list[0]])
