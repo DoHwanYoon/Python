@@ -2,7 +2,7 @@ import collections
 from openpyxl import load_workbook
 import pandas as pd
 
-# Output all contents of file.
+# Output all contents of file..
 excel_file = pd.read_excel('test.xlsx', sheet_name='Sheet1')
 print(excel_file)
 
