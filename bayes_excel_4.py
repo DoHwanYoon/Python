@@ -4,7 +4,6 @@ import pandas as pd
 
 # Output all contents of file.
 excel_file = pd.read_excel('test.xlsx', sheet_name='Sheet1')
-#print(excel_file)
 
 load_wb = load_workbook('test.xlsx', data_only=False)    # You must "data_only = True". If not this, you are see function value
 load_ws = load_wb['Sheet1']                             # Enter Sheet Name
