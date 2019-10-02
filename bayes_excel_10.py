@@ -14,7 +14,7 @@ cols = load_ws.max_column + 1                           # Number of colmn (add t
 
 append_list=[]
 cnt_0 =0
-cnt_1=0
+cnt_1=0#
 data_list_0 =[] # 결과 리스트의 [0]밸류값을 가지는 데이터 
 data_list_1 =[] # 결과 리스트의 [0]밸류값을 가지는 데이터
 result_list = [] #결과 인덱스 밸류
